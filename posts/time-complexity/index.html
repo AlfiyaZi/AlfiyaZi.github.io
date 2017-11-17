@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="keyword 1, keyword 2, keyword 3" name="keywords">
+<meta content="Alfiya Ziganshina" name="author">
+<meta property="og:title" content="Time-complexity -  Connecting the dots">
+<meta property="og:url" content="https://AlfiyaZi.github.io/posts/time-complexity/">
+<meta property="og:description" content="Your description here">
+<meta property="og:type" content="website" />
+<title>Time-complexity |  Connecting the dots</title>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+<link rel="stylesheet" href="https://AlfiyaZi.github.io/css/style.css">
+<link rel="shortcut icon" href="https://AlfiyaZi.github.io/wave.ico">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/github.min.css">
+
+</head>
+
+<body>
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="https://AlfiyaZi.github.io"><h1 class="title is-4"> Connecting the dots</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile">
+          
+          <a class="level-item" href="https://github.com/alfiyaZi" target="_blank">
+            <span class="icon">
+              <i class="fa fa-github"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://gitlab.com/alfiyaZi" target="_blank">
+            <span class="icon">
+              <i class="fa fa-gitlab"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://twitter.com/silver_a" target="_blank">
+            <span class="icon">
+              <i class="fa fa-twitter"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="https://linkedin.com/pub/alfiya-ziganshina/26/328/a" target="_blank">
+            <span class="icon">
+              <i class="fa fa-linkedin-square"></i>
+            </span>
+          </a>
+          
+          <a class="level-item" href="/index.xml" target="_blank">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+          </a>
+          
+        </nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Time-complexity</h1>
+    <h2 class="subtitle is-5">November 17, 2017 by Alfiya Ziganshina</h2>
+    
+    <div class="content">
+      <p>from <a href="https://wiki.python.org/moin/TimeComplexity">https://wiki.python.org/moin/TimeComplexity</a></p>
+
+<p>This page documents the time-complexity (aka &ldquo;Big O&rdquo; or &ldquo;Big Oh&rdquo;) of various
+operations in current CPython. Other Python implementations (or older or
+still-under development versions of CPython) may have slightly different
+performance characteristics. However, it is generally safe to assume that they
+are not slower by more than a factor of O(log n).</p>
+
+<p>Generally, &lsquo;n&rsquo; is the number of elements currently in the container. &lsquo;k&rsquo; is
+either the value of a parameter or the number of elements in the parameter.</p>
+
+<p>list</p>
+
+<p>The Average Case assumes parameters generated uniformly at random.</p>
+
+<p>Internally, a list is represented as an array; the largest costs come from
+growing beyond the current allocation size (because everything must move), or
+from inserting or deleting somewhere near the beginning (because everything
+after that must move). If you need to add/remove at both ends, consider using a
+collections.deque instead.</p>
+
+<table>
+<thead>
+<tr>
+<th><strong>Operation</strong></th>
+<th><strong>Average Case</strong></th>
+<th><a href="http://en.wikipedia.org/wiki/Amortized_analysis">Amortized Worst Case</a></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Copy</td>
+<td>O(n)</td>
+<td>O(n)</td>
+</tr>
+
+<tr>
+<td>Append[1]</td>
+<td>O(1)</td>
+<td>O(1)</td>
+</tr>
+
+<tr>
+<td>Pop last</td>
+<td>O(1)</td>
+<td>O(1)</td>
+</tr>
+
+<tr>
+<td>Pop intermediate</td>
+<td>O(k)</td>
+<td>O(k)</td>
+</tr>
+
+<tr>
+<td>Insert</td>
+<td>O(n)</td>
+<td>O(n)</td>
+</tr>
+
+<tr>
+<td>Get Item</td>
+<td>O(1)</td>
+<td>O(1)</td>
+</tr>
+
+<tr>
+<td>Set Item</td>
+<td>O(1)</td>
+<td>O(1)</td>
+</tr>
+
+<tr>
+<td>Delete Item</td>
+<td>O(n)</td>
+<td>O(n)</td>
+</tr>
+
+<tr>
+<td>Iteration</td>
+<td>O(n)</td>
+<td>O(n)</td>
+</tr>
+
+<tr>
+<td>Get Slice</td>
+<td>O(k)</td>
+<td>O(k)</td>
+</tr>
+
+<tr>
+<td>Del Slice</td>
+<td>O(n)</td>
+<td>O(n)</td>
+</tr>
+
+<tr>
+<td>Set Slice</td>
+<td>O(k+n)</td>
+<td>O(k+n)</td>
+</tr>
+
+<tr>
+<td>Extend[1]</td>
+<td>O(k)</td>
+<td>O(k)</td>
+</tr>
+
+<tr>
+<td><a href="http://svn.python.org/projects/python/trunk/Objects/listsort.txt">Sort</a></td>
+<td>O(n log n)</td>
+<td>O(n log n)</td>
+</tr>
+
+<tr>
+<td>Multiply</td>
+<td>O(nk)</td>
+<td>O(nk)</td>
+</tr>
+
+<tr>
+<td>x in s</td>
+<td>O(n)</td>
+<td></td>
+</tr>
+
+<tr>
+<td>min(s), max(s)</td>
+<td>O(n)</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Get Length</td>
+<td>O(1)</td>
+<td>O(1)</td>
+</tr>
+</tbody>
+</table>
+
+<p>collections.deque</p>
+
+<p>A deque (double-ended queue) is represented internally as a doubly linked list.
+(Well, a list of arrays rather than objects, for greater efficiency.) Both ends
+are accessible, but even looking at the middle is slow, and adding to or
+removing from the middle is slower still.</p>
+
+<table>
+<thead>
+<tr>
+<th><strong>Operation</strong></th>
+<th><strong>Average Case</strong></th>
+<th><strong>Amortized Worst Case</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Copy</td>
+<td>O(n)</td>
+<td>O(n)</td>
+</tr>
+
+<tr>
+<td>append</td>
+<td>O(1)</td>
+<td>O(1)</td>
+</tr>
+
+<tr>
+<td>appendleft</td>
+<td>O(1)</td>
+<td>O(1)</td>
+</tr>
+
+<tr>
+<td>pop</td>
+<td>O(1)</td>
+<td>O(1)</td>
+</tr>
+
+<tr>
+<td>popleft</td>
+<td>O(1)</td>
+<td>O(1)</td>
+</tr>
+
+<tr>
+<td>extend</td>
+<td>O(k)</td>
+<td>O(k)</td>
+</tr>
+
+<tr>
+<td>extendleft</td>
+<td>O(k)</td>
+<td>O(k)</td>
+</tr>
+
+<tr>
+<td>rotate</td>
+<td>O(k)</td>
+<td>O(k)</td>
+</tr>
+
+<tr>
+<td>remove</td>
+<td>O(n)</td>
+<td>O(n)</td>
+</tr>
+</tbody>
+</table>
+
+<p>set</p>
+
+<p>See dict &ndash; the implementation is intentionally very similar.</p>
+
+<table>
+<thead>
+<tr>
+<th><strong>Operation</strong></th>
+<th><strong>Average case</strong></th>
+<th><strong>Worst Case</strong></th>
+<th><strong>notes</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>x in s</td>
+<td>O(1)</td>
+<td>O(n)</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Union s|t</td>
+<td><a href="https://wiki.python.org/moin/TimeComplexity_%28SetCode%29">O(len(s)+len(t))</a></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>Intersection s&amp;t</td>
+<td>O(min(len(s), len(t))</td>
+<td>O(len(s) * len(t))</td>
+<td>replace &ldquo;min&rdquo; with &ldquo;max&rdquo; if t is not a set</td>
+</tr>
+
+<tr>
+<td>Multiple intersection s1&amp;s2&amp;..&amp;sn</td>
+<td></td>
+<td>(n-1)*O(l) where l is max(len(s1),..,len(sn))</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Difference s-t</td>
+<td>O(len(s))</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>s.difference_update(t)</td>
+<td>O(len(t))</td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<td>Symmetric Difference s\^t</td>
+<td>O(len(s))</td>
+<td>O(len(s) * len(t))</td>
+<td></td>
+</tr>
+
+<tr>
+<td>s.symmetric_difference_update(t)</td>
+<td>O(len(t))</td>
+<td>O(len(t) * len(s))</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>As seen in the <a href="http://svn.python.org/projects/python/trunk/Objects/setobject.c">source
+code</a> the
+complexities for set difference s-t or s.difference(t) (set_difference())
+and in-place set difference s.difference_update(t)
+(set_difference_update_internal()) are different! The first one is O(len(s))
+(for every element in s add it to the new set, if not in t). The second one
+is O(len(t)) (for every element in t remove it from s). So care must be
+taken as to which is preferred, depending on which one is the longest set
+and whether a new set is needed.</p></li>
+
+<li><p>To perform set operations like s-t, both s and t need to be sets. However
+you can do the method equivalents even if t is any iterable, for example
+s.difference(l), where l is a list.</p></li>
+</ul>
+
+<p>dict</p>
+
+<p>The Average Case times listed for dict objects assume that the hash function for
+the objects is sufficiently robust to make collisions uncommon. The Average Case
+assumes the keys used in parameters are selected uniformly at random from the
+set of all keys.</p>
+
+<p>Note that there is a fast-path for dicts that (in practice) only deal with str
+keys; this doesn&rsquo;t affect the algorithmic complexity, but it can significantly
+affect the constant factors: how quickly a typical program finishes.</p>
+
+<table>
+<thead>
+<tr>
+<th><strong>Operation</strong></th>
+<th><strong>Average Case</strong></th>
+<th><strong>Amortized Worst Case</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Copy[2]</td>
+<td>O(n)</td>
+<td>O(n)</td>
+</tr>
+
+<tr>
+<td>Get Item</td>
+<td>O(1)</td>
+<td>O(n)</td>
+</tr>
+
+<tr>
+<td>Set Item[1]</td>
+<td>O(1)</td>
+<td>O(n)</td>
+</tr>
+
+<tr>
+<td>Delete Item</td>
+<td>O(1)</td>
+<td>O(n)</td>
+</tr>
+
+<tr>
+<td>Iteration[2]</td>
+<td>O(n)</td>
+<td>O(n)</td>
+</tr>
+</tbody>
+</table>
+
+<p>Notes</p>
+
+<p>[1] = These operations rely on the &ldquo;Amortized&rdquo; part of &ldquo;Amortized Worst Case&rdquo;.
+Individual actions may take surprisingly long, depending on the history of the
+container.</p>
+
+<p>[2] = For these operations, the worst case *n* is the maximum size the container
+ever achieved, rather than just the current size. For example, if N objects are
+added to a dictionary, then N-1 are deleted, the dictionary will still be sized
+for N objects (at least) until another insertion is made.</p>
+
+    </div>
+    
+        <div class="nav-left">
+    <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fAlfiyaZi.github.io%2fposts%2ftime-complexity%2f" title="Share on Facebook" target="_blank"><span class="fa fa-facebook fa-2x" aria-hidden="true"></span></a>
+    <a class="nav-item" href="https://plus.google.com/share?url=https%3a%2f%2fAlfiyaZi.github.io%2fposts%2ftime-complexity%2f" title="Share on Google+" target="_blank"><span class="fa fa-google-plus fa-2x" aria-hidden="true"></span></a>
+    <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fAlfiyaZi.github.io%2fposts%2ftime-complexity%2f" title="Share on LinkedIn" target="_blank"><span class="fa fa-linkedin fa-2x" aria-hidden="true"></span></a>
+    <a class="nav-item" href="https://twitter.com/home?status=Time-complexity - https%3a%2f%2fAlfiyaZi.github.io%2fposts%2ftime-complexity%2f" title="Tweet this" target="_blank"><span class="fa fa-twitter fa-2x"></span></a>
+    <a class="nav-item" href="http://www.reddit.com/submit?url=https%3a%2f%2fAlfiyaZi.github.io%2fposts%2ftime-complexity%2f&title=Time-complexity" title="Share on Reddit" target="_blank"><span class="fa fa-reddit-alien fa-2x" aria-hidden="true"></span></a>
+    
+    </div>
+    
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <aside><div id="disqus_thread"></div></aside>
+    <script type="text/javascript">
+      var disqus_shortname = 'shortname';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; 2017 <a>Hucore theme</a> & <a href="http://gohugo.io" target="_blank">Hugo</a> ♥</p>
+  </div>
+</section>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js" integrity="sha256-+bhVTaRmJ/c07eV80nU8gD2cBBF0rYkf1txqXlrbvb0=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/go.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/dockerfile.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'trackingcode', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
