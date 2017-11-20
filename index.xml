@@ -18,8 +18,7 @@
       <pubDate>Fri, 17 Nov 2017 12:33:41 +0500</pubDate>
       
       <guid>https://AlfiyaZi.github.io/posts/time-complexity/</guid>
-      <description>from https://wiki.python.org/moin/TimeComplexity
-This page documents the time-complexity (aka &amp;ldquo;Big O&amp;rdquo; or &amp;ldquo;Big Oh&amp;rdquo;) of various operations in current CPython. Other Python implementations (or older or still-under development versions of CPython) may have slightly different performance characteristics. However, it is generally safe to assume that they are not slower by more than a factor of O(log n).
+      <description>This page documents the time-complexity (aka &amp;ldquo;Big O&amp;rdquo; or &amp;ldquo;Big Oh&amp;rdquo;) of various operations in current CPython. Other Python implementations (or older or still-under development versions of CPython) may have slightly different performance characteristics. However, it is generally safe to assume that they are not slower by more than a factor of O(log n).
 Generally, &amp;lsquo;n&amp;rsquo; is the number of elements currently in the container. &amp;lsquo;k&amp;rsquo; is either the value of a parameter or the number of elements in the parameter.</description>
     </item>
     
@@ -29,7 +28,7 @@ Generally, &amp;lsquo;n&amp;rsquo; is the number of elements currently in the co
       <pubDate>Tue, 14 Nov 2017 21:46:12 +0500</pubDate>
       
       <guid>https://AlfiyaZi.github.io/posts/resources/</guid>
-      <description></description>
+      <description>https://github.com/starandtina/backend-interview-questions</description>
     </item>
     
     <item>
@@ -45,29 +44,6 @@ $$&lt;/p&gt;
 
 &lt;p&gt;Additional details can be found on &lt;a href=&#34;https://github.com/mathjax/&#34;&gt;GitHub&lt;/a&gt; or on the &lt;a href=&#34;https://www.mathjax.org/#docs&#34;&gt;Documentaion&lt;/a&gt;.
 &lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>About Hugo</title>
-      <link>https://AlfiyaZi.github.io/about/</link>
-      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://AlfiyaZi.github.io/about/</guid>
-      <description>Hugo is a static site engine written in Go.
-It makes use of a variety of open source projects including:
- Cobra Viper J Walter Weatherman Cast  Learn more and contribute on GitHub.
-Setup Some fun facts about Hugo:
- Built in Go Loosely inspired by Jekyll Primarily developed by spf13 on the train while commuting to and from Manhattan. Coded in Vim using spf13-vim  Have questions or suggestions?</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://AlfiyaZi.github.io/~about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://AlfiyaZi.github.io/~about/</guid>
-      <description>alya��������������������������������������������������a�l�y�a���
-Thanks for reading! in Vim using [spf13-vim](http://vi����SO�(�jM����ZP��</description>
     </item>
     
   </channel>

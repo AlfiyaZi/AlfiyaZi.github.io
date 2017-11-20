@@ -18,8 +18,7 @@
       <pubDate>Fri, 17 Nov 2017 12:33:41 +0500</pubDate>
       
       <guid>https://AlfiyaZi.github.io/posts/time-complexity/</guid>
-      <description>from https://wiki.python.org/moin/TimeComplexity
-This page documents the time-complexity (aka &amp;ldquo;Big O&amp;rdquo; or &amp;ldquo;Big Oh&amp;rdquo;) of various operations in current CPython. Other Python implementations (or older or still-under development versions of CPython) may have slightly different performance characteristics. However, it is generally safe to assume that they are not slower by more than a factor of O(log n).
+      <description>This page documents the time-complexity (aka &amp;ldquo;Big O&amp;rdquo; or &amp;ldquo;Big Oh&amp;rdquo;) of various operations in current CPython. Other Python implementations (or older or still-under development versions of CPython) may have slightly different performance characteristics. However, it is generally safe to assume that they are not slower by more than a factor of O(log n).
 Generally, &amp;lsquo;n&amp;rsquo; is the number of elements currently in the container. &amp;lsquo;k&amp;rsquo; is either the value of a parameter or the number of elements in the parameter.</description>
     </item>
     
@@ -29,7 +28,7 @@ Generally, &amp;lsquo;n&amp;rsquo; is the number of elements currently in the co
       <pubDate>Tue, 14 Nov 2017 21:46:12 +0500</pubDate>
       
       <guid>https://AlfiyaZi.github.io/posts/resources/</guid>
-      <description></description>
+      <description>https://github.com/starandtina/backend-interview-questions</description>
     </item>
     
     <item>
