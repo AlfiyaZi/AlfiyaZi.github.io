@@ -24,13 +24,13 @@
   </url>
   
   <url>
-    <loc>https://AlfiyaZi.github.io/categories/</loc>
+    <loc>https://AlfiyaZi.github.io/tags/algorithmic/</loc>
+    <lastmod>2014-05-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://AlfiyaZi.github.io/tags/development/</loc>
-    <lastmod>2014-05-11T00:00:00+00:00</lastmod>
+    <loc>https://AlfiyaZi.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
@@ -41,13 +41,7 @@
   </url>
   
   <url>
-    <loc>https://AlfiyaZi.github.io/tags/go/</loc>
-    <lastmod>2014-05-11T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://AlfiyaZi.github.io/tags/golang/</loc>
+    <loc>https://AlfiyaZi.github.io/tags/development/</loc>
     <lastmod>2014-05-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -60,6 +54,12 @@
   
   <url>
     <loc>https://AlfiyaZi.github.io/tags/hugo/</loc>
+    <lastmod>2014-05-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://AlfiyaZi.github.io/tags/math/</loc>
     <lastmod>2014-05-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

@@ -80,9 +80,9 @@
     
       <div class="tags">
     
-        <a class="button is-link" href="/tags/go">go</a>
+        <a class="button is-link" href="/tags/algorithmic">algorithmic</a>
     
-        <a class="button is-link" href="/tags/golang">golang</a>
+        <a class="button is-link" href="/tags/math">math</a>
     
         <a class="button is-link" href="/tags/hugo">hugo</a>
     
@@ -94,49 +94,90 @@
 
     
     <div class="content">
-      <p>MathJax can render latex math equations in webpages.
-$$
-\phi = \frac{(1+\sqrt{5})}{2} = 1.6180339887\cdots
-$$</p>
+      
 
-<p>Additional details can be found on <a href="https://github.com/mathjax/">GitHub</a> or on the <a href="https://www.mathjax.org/#docs">Documentaion</a>.
-</p>
+<h3 id="numb3rs-102-sabotage">Numb3rs 102: Sabotage</h3>
 
-<h3 id="example-1">Example 1</h3>
+<p>Don investigates a series of train wrecks that recreate accidents due to railroad negligence. A numerical code is left at the site of each accident. Charlie helps Don to find the terrorist behind the recreations by breaking the codes, which contain statistics of the wrecks occurred in the past.</p>
 
-<p>If the text between $$ contains newlines it will rendered in display mode:</p>
+<p>The art of breaking codes by analyzing patterns is part of a wider mathematical area called Cryptography. In <a href="http://www.math.cornell.edu/~numb3rs/whieldon/num205.html">Episode 205</a> the reader can find a brief explanation of some of the simplest algorithms to <em>encode</em> and <em>decode</em> information (we also refer the reader to <a href="http://www.math.cornell.edu/~numb3rs/luthy2/num324.html">Episode 324</a>). In order to break the code in this Episode Charlie also uses <em>statistical data analysis</em>, a technique mentioned in <a href="http://www.math.cornell.edu/~numb3rs/youssef/211/numb3rs211.html">Episode 211</a> as well.</p>
 
-<pre><code>$$
-f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
-$$
-</code></pre>
+<p>By the end of the episode, Charlie gives a passionate speech about the way nature communicates to us in terms of mathematical patterns. We quote his exact words here: <em>&ldquo;Math is the real world, okay, it&rsquo;s everywhere, okay. Can I show you? You see how the petals spiral? The number of petals in each row is the sum of the preceding two rows, the Fibonacci Sequence. It&rsquo;s found in the structure of crystals and the spiral of galaxies and a nautilus shell. What&rsquo;s more, the ratio between each number in the sequence to the one before it is approximately 1.61803, what the Greeks call the Golden Ratio. It shows up in the pyramids of Giza and the Parthenon at Athens, the dimensions of this card. And it&rsquo;s based on a number we can find in a flower. Math is nature&rsquo;s language&hellip; its method of communicating directly with us. Everything is numbers.&rdquo;</em></p>
 
-<p>$$
-f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
-$$</p>
+<p>Below we will explain the main properties of the <strong>Fibonacci sequence</strong> and the <strong>Golden Ratio</strong>, and we will formally establish the relationship between these two mathematical entities.</p>
 
-<h3 id="example-2">Example 2</h3>
+<h2 id="the-fibonacci-sequence">The Fibonacci sequence</h2>
 
-<pre><code>$$
-\frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}} {1+\frac{e^{-8\pi}} {1+\cdots} } } }
-$$
-</code></pre>
+<div id="tangent">**The Fibonacci sequence** or **Fibonacci numbers** are named after Leonardo of Pisa (about 1175 - 1250), who was nicknamed Fibonacci (from filius Bonaccio = son of Bonaccio). He was investigating (in the year 1202) how fast rabbits breed in ideal circumstances and found out that the number of pairs of rabbits, female and male, in the population increases according to the mentioned sequence.</div>
 
-<p>​​$$
-\frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}} {1+\frac{e^{-8\pi}} {1+\cdots} } } }
-$$
-​​</p>
+<p><font color="FF0000">The Fibonacci sequence</font> is a sequence of numbers, <img src="equation_1.png" alt="" />, generated recursively in the following way,</p>
 
-<h3 id="example-3">Example 3</h3>
+<p><img src="equation_2.png" alt="" /></p>
 
-<pre><code>$$
-1 +  \frac{q^2}{(1-q)}+\frac{q^6}{(1-q)(1-q^2)}+\cdots = \prod_{j=0}^{\infty}\frac{1}{(1-q^{5j+2})(1-q^{5j+3})}, \quad\quad \text{for }\lvert q\rvert&lt;1.
-$$
-</code></pre>
+<p>In words, <font color="FF0000">every number in the sequence is equal to the sum of the two previous ones</font>. The numbers in this sequence get arbitrarily big as <em>n</em> increases. The first 11 numbers in this sequence are shown below:</p>
 
-<p>$$
-1 +  \frac{q^2}{(1-q)}+\frac{q^6}{(1-q)(1-q^2)}+\cdots = \prod_{j=0}^{\infty}\frac{1}{(1-q^{5j+2})(1-q^{5j+3})}, \quad\quad \text{for }\lvert q\rvert&lt;1.
-$$</p>
+<p><img src="equation_3.png" alt="" /></p>
+
+<p><img src="spiral.png" alt="" /> Charlie mentions that this sequence is found in the spiral structure of some flowers and galaxies. Here we explain what he referred to. Suppose that you have two squares of side-length equal to <font color="FF0000">1</font>, sharing one of the sides. Then you put a square of side-length <font color="FF0000">2</font> on top of them. Then you draw a square of side-length <font color="FF0000">3</font> on the left of the rectangle drawn before. And you continue this way, adding squares of <font color="FF0000"> side-length equal to the sum of the side-lengths of the two previous squares</font>, as shown in the figure on the right. Then, by construction, the lengths of the squares increase according to the Fibonacci sequence, and if you draw a curve joining the opposite vertices of the squares we obtain a spiral as shown in the figure as well.</p>
+
+<p>These spirals appear in nature in numerous examples, such as sea shells, flowers and galaxies. The reader can find more about the appearance of the Fibonacci sequence in nature at <a href="http://www.mcs.surrey.ac.uk/Personal/R.Knott/Fibonacci/fibnat.html">http://www.mcs.surrey.ac.uk/Personal/R.Knott/Fibonacci/fibnat.html</a><a>.</a></p>
+
+<p><a></a></p>
+
+<p><a>The Fibonacci numbers satisfy a numerous amount of very interesting identities. The reader can find some of them at</a> <a href="http://mathworld.wolfram.com/FibonacciNumber.html">http://mathworld.wolfram.com/FibonacciNumber.html</a>. We will concentrate our attention here to its relationship with the golden ratio, which we explain below.</p>
+
+<h2 id="the-golden-ratio">The golden ratio</h2>
+
+<p><img src="spiral2.png" alt="" /> Suppose that you have a rectangle with sides of length 1 and <em>x</em>. Then you partition the rectangle into a square with side length 1 and another rectangle of side lengths 1 and <em>x-1</em>. The <font color="FF0000">golden ratio</font> or <font color="FF0000">golden proportion</font> is the only positive number <em>x</em> such that the two rectangles obtained by this construction are similar, i.e.</p>
+
+<p><img src="equation_4.png" alt="" /></p>
+
+<p>The golden ratio is usually denoted by the Greek letter <img src="equation_5.png" alt="" />, and according to the equation above we find that <img src="equation_5.png" alt="" /> satisfies the following quadratic equation</p>
+
+<p><img src="equation_6.png" alt="" /></p>
+
+<p>which implies that <img src="equation_7.png" alt="" /></p>
+
+<div id="tangent">The golden ratio or golden proportion was known by the ancient Greeks, it occurs in some of the Platonic Solids and it is mentioned in Euclid's Elements. Although this golden proportion is found in some of the Ancient Greek constructions, such as the Parthenon, there is no definite evidence that they were designed by using this mathematical constant (see picture below). The reader can find more about the golden ratio and architecture at Dr. Ron Knott's website, [The Golden section in architecture](http://www.mcs.surrey.ac.uk/Personal/R.Knott/Fibonacci/fibInArt.html#art).</div>
+
+<p>This number possesses many nice properties. For instance its continued fraction representation (see <a href="http://www.math.cornell.edu/~numb3rs/luthy/num101.html">Episode 101</a>) only contains ones, i.e.</p>
+
+<p><img src="equation_8.png" alt="" /></p>
+
+<p>There is also a nice way of expressing the golden ratio as a limit of radicals in the following way,</p>
+
+<p><img src="equation_9.png" alt="" /></p>
+
+<p>Regarding the construction at the beginning of the section, if we continue partitioning the successive rectangles into a square and a new rectangle, we deduce that all the rectangles are similar, and if we draw a curve joining the opposite vertices of the squares we obtain a spiral similar to the one generated by the Fibonacci sequence. Below we explain the algebraic relationship between the golden ratio and the Fibonacci sequence, which explains the similarity of the mentioned spirals.</p>
+
+<h2 id="the-relationship-between-the-golden-ratio-and-the-fibonacci-sequence">The relationship between the golden ratio and the Fibonacci sequence</h2>
+
+<p><img src="parthenon.png" alt="" /> The quadratic formula satisfied by the golden ratio implies that</p>
+
+<p><img src="equation_10.png" alt="" /></p>
+
+<p>Since <img src="equation_11.png" alt="" /> satisfies the same equation, we get that</p>
+
+<p><img src="equation_12.png" alt="" /></p>
+
+<p>Define</p>
+
+<p><img src="equation_13.png" alt="" /></p>
+
+<p>The two facts above imply that <img src="equation_14.png" alt="" /> satisfies the Fibonacci recursion as well and since</p>
+
+<p><img src="equation_15.png" alt="" /></p>
+
+<p>We conclude that <img src="equation_16.png" alt="" /></p>
+
+<div id="tangent">Binet's formula is named after the French mathematician Jacques Philippe Marie Binet, who derived it in 1843\. However this formula was already known by Euler, Daniel Bernoulli, and de Moivre more than a century earlier.</div>
+
+<p>This is the famous <font color="FF0000">Binet&rsquo;s formula</font>, which gives us a closed expression for the terms of the Fibonacci sequence in terms of <em>n</em>. This formula allows us to prove properties of the Fibonacci sequence, in particular we can prove that,</p>
+
+<p><img src="equation_17.png" alt="" /></p>
+
+<p>This formula in words tells us that as <em>n</em> increases, the ratio between consecutive terms of the Fibonacci sequence approaches the golden ratio. This is exactly what Charlie is referring to when he says: &ldquo;&hellip; the ratio between each number in the sequence to the one before it is approximately 1.61803, what the Greeks call the Golden Ratio.&rdquo;</p>
+
     </div>
     
         <div class="nav-left">

@@ -18,13 +18,8 @@
       <pubDate>Sun, 11 May 2014 00:00:00 +0000</pubDate>
       
       <guid>https://AlfiyaZi.github.io/posts/math-example/</guid>
-      <description>&lt;p&gt;MathJax can render latex math equations in webpages.
-$$
-\phi = \frac{(1+\sqrt{5})}{2} = 1.6180339887\cdots
-$$&lt;/p&gt;
-
-&lt;p&gt;Additional details can be found on &lt;a href=&#34;https://github.com/mathjax/&#34;&gt;GitHub&lt;/a&gt; or on the &lt;a href=&#34;https://www.mathjax.org/#docs&#34;&gt;Documentaion&lt;/a&gt;.
-&lt;/p&gt;</description>
+      <description>Numb3rs 102: Sabotage Don investigates a series of train wrecks that recreate accidents due to railroad negligence. A numerical code is left at the site of each accident. Charlie helps Don to find the terrorist behind the recreations by breaking the codes, which contain statistics of the wrecks occurred in the past.
+The art of breaking codes by analyzing patterns is part of a wider mathematical area called Cryptography. In Episode 205 the reader can find a brief explanation of some of the simplest algorithms to encode and decode information (we also refer the reader to Episode 324).</description>
     </item>
     
   </channel>
