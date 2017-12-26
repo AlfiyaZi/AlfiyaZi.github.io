@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://AlfiyaZi.github.io/posts/flask-extentions/</loc>
+    <lastmod>2017-12-26T11:48:38+05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://AlfiyaZi.github.io/posts/time-complexity/</loc>
     <lastmod>2017-11-17T12:33:41+05:00</lastmod>
   </url>
@@ -19,7 +24,7 @@
   
   <url>
     <loc>https://AlfiyaZi.github.io/</loc>
-    <lastmod>2017-11-17T12:33:41+05:00</lastmod>
+    <lastmod>2017-12-26T11:48:38+05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -72,7 +77,7 @@
   
   <url>
     <loc>https://AlfiyaZi.github.io/posts/</loc>
-    <lastmod>2017-11-17T12:33:41+05:00</lastmod>
+    <lastmod>2017-12-26T11:48:38+05:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; 2017 &lt;a&gt;Hucore theme&lt;/a&gt; &amp; &lt;a href=&#34;http://gohugo.io&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt; ♥</copyright>
-    <lastBuildDate>Fri, 17 Nov 2017 12:33:41 +0500</lastBuildDate>
+    <lastBuildDate>Tue, 26 Dec 2017 11:48:38 +0500</lastBuildDate>
     
 	<atom:link href="https://AlfiyaZi.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Flask Extentions</title>
+      <link>https://AlfiyaZi.github.io/posts/flask-extentions/</link>
+      <pubDate>Tue, 26 Dec 2017 11:48:38 +0500</pubDate>
+      
+      <guid>https://AlfiyaZi.github.io/posts/flask-extentions/</guid>
+      <description>http://flask.pocoo.org/extensions/
+Flask-Dance Doing the OAuth dance with style using Flask, requests, and oauthlib. This is an approved extension.
+Author: David Baumgold PyPI Page: Flask-Dance Documentation: Read docs @ flask-dance.readthedocs.org On Github:singingwolfboy/flask-dance</description>
+    </item>
     
     <item>
       <title>Time-complexity</title>
